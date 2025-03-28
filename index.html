@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VELORIA</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader-container">
+            <div class="cube">
+                <div class="cube-face front"></div>
+                <div class="cube-face back"></div>
+                <div class="cube-face right"></div>
+                <div class="cube-face left"></div>
+                <div class="cube-face top"></div>
+                <div class="cube-face bottom"></div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+            <div class="loading-text">Please Wait!!</div>
+        </div>
+    </div>
+
+<script>
+    
+
+document.addEventListener('DOMContentLoaded', function() {
+    const preloader = document.getElementById('preloader');
+    const content = document.querySelector('.content');
+    const progress = document.getElementById('progress');
+    const loadingText = document.querySelector('.loading-text');
+    
+
+    let width = 0;
+    const interval = setInterval(() => {
+        if (width >= 100) {
+            clearInterval(interval);
+            loadingText.textContent = "Here We Go!";
+            
+            setTimeout(() => {
+
+                preloader.classList.add('preloader-done');
+                
+
+                content.style.display = 'block';
+                
+
+                void content.offsetWidth;
+                
+
+                content.style.opacity = '1';
+                
+
+                setTimeout(() => {
+                    preloader.style.display = 'none';
+                }, 800);
+            }, 600);
+        } else {
+            width += Math.floor(Math.random() * 5) + 1;
+            width = Math.min(width, 100);
+            progress.style.width = width + '%';
+            
+            if (width > 80) {
+            loadingText.textContent = "VELORIA";
+            } else if (width > 60) {
+                loadingText.textContent = "Chlothing";
+            } else if (width > 40) {
+                loadingText.textContent = "AI OF";
+            } else if (width > 50) {
+                loadingText.textContent = "Here We Go";
+            }
+        }
+    }, 100);
+});
+
+
+
+</script>
+
+    <br><div class="brand-name">VELORIA</div>
+    <header>
+        <nav class="navbar">
+            
+            <ul class="nav-links">
+                <li><a href="#">SHOP</a></li>
+                <li><a href="#">SPECIAL</a></li>
+            </ul>
+            <ul class="nav-links">
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero-banner">
+        <div class="banner-content">
+          <h1>We are here to help you</h1>
+          <p>AI-powered recommendations tailored just for you.</p>
+          <div class="search-bar">
+            
+            <input type="text" placeholder="Search">
+            <i class="fas fa-search"></i></div> <br>
+          <button class="cta-button">Explore Now</button>
+        </div>
+      </section>
+
+    
+
+
+    <section class="banner-two">
+        <div class="content">
+            <h1 class="animated-text">AI PICKS, <br> YOU STYLE</h1>
+            <p class="sub-text">Smart AI-powered clothing recommendations tailored just for you.</p>
+            <a href="#" class="cta-btn">DISCOVER NOW</a>
+        </div>
+        <div class="image-container">
+            <img src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="AI Recommended T-shirt" class="floating-image">
+        </div>
+    </section>
+
+    <section class="info-section">
+        <h1>AI Driven Chlothing</h1>
+        <div class="info-block">
+          <p>"The future of clothing is here. Our AI-powered recommendation system uses advanced machine learning algorithms to provide personalized clothing suggestions based on your style preferences and trends."</p>
+          <h3>AI RECOMMENDED STYLES</h3>
+          <hr>
+        </div>
+        <div class="info-block">
+          <p>"With real-time data analysis from various e-commerce platforms, we ensure you always find the best fashion deals. Experience shopping like never before."</p>
+          <h3>SMART SHOPPING EXPERIENCE</h3>
+          <hr>
+        </div>
+        <div class="info-block">
+          <p>"Our innovative AI model learns from your choices, understands your fashion sense, and continuously refines recommendations to make shopping effortless and enjoyable."</p>
+          <h3>PERSONALIZED FOR YOU</h3>
+        </div>
+      </section>
+
+    <section class="contact-section">
+        <h1>REACH OUT FOR <br> INQUIRIES</h1>
+
+        <div class="contact-info">
+            <div class="contact-item">
+                <h3>PHONE</h3>
+                <p>(123) 456-7890</p>
+            </div>
+
+            <div class="contact-item">
+                <h3>EMAIL</h3>
+                <p><a href="mailto:hello@reallygreatsite.com">hello@reallygreatsite.com</a></p>
+            </div>
+
+            <div class="contact-item">
+                <h3>SOCIAL</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <h2>AND PARTNERSHIPS</h2>
+    </section>
+
+     <section class="services-section">
+        <div class="left-content">
+            <h1>Our Project</h1>
+            <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="AI Shopping Assistance">
+        </div>
+        <div class="right-content">
+            <div class="service">
+                <span class="service-number">01</span>
+                <div class="service-text">
+                    <h2>AI-Powered Recommendations</h2>
+                    <p>Our intelligent AI analyzes your style and preferences to suggest the best outfits from multiple e-commerce platforms.</p>
+                </div>
+            </div>
+            <div class="service">
+                <span class="service-number">02</span>
+                <div class="service-text">
+                    <h2>Price & Trend Comparison</h2>
+                    <p>We track pricing trends across Amazon, Flipkart, and Myntra to ensure you get the best deals on your favorite brands.</p>
+                </div>
+            </div>
+            <div class="service">
+                <span class="service-number">03</span>
+                <div class="service-text">
+                    <h2>Seamless Shopping Experience</h2>
+                    <p>Effortlessly browse, compare, and purchase clothing with just a few clicks—making fashion shopping smarter and easier.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="banner">
+        <div class="team">
+
+            <div class="team-member">
+                <img src="https://images.unsplash.com/photo-1543087903-1ac2ec7aa8c5?q=80&w=2098&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Frontend Developer">
+                <h2>Frontend Developer</h2>
+                <p>Building seamless UI for the best user experience.</p>
+            </div>
+
+ 
+            <div class="team-member">
+                <img src="https://images.unsplash.com/photo-1543087903-1ac2ec7aa8c5?q=80&w=2098&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Backend Developer">
+                <h2>Backend Developer</h2>
+                <p>Creating a powerful AI model for intelligent recommendations.</p>
+            </div>
+
+   
+            <div class="team-member">
+                <img src="https://images.unsplash.com/photo-1543087903-1ac2ec7aa8c5?q=80&w=2098&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Project Manager">
+                <h2>Project Manager</h2>
+                <p>Leading the future of AI-driven shopping experiences.</p>
+            </div>
+        </div>
+
+        <div class="project-info">
+            <h1>Future of Shopping</h1>
+            <p>
+                Our AI-powered recommendation system revolutionizes online shopping by providing 
+                real-time, smart suggestions tailored to your style. Shop effortlessly with AI assistance!
+            </p>
+        </div>
+    </div>
+
+    
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">VELORIA</div>
+            
+            <div class="footer-links">
+                <a href="#">Shop</a>
+                <a href="#">Special</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+    
+            <div class="footer-bottom">
+                <p>© 2025 Veloria. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    
+
+
+
+</body>
+</html>
